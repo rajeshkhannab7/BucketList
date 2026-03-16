@@ -162,7 +162,7 @@ struct FilterChip: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(isSelected ? Color.accentColor : Color(.systemGray5))
+            .background(isSelected ? Color.accentColor : Color.gray.opacity(0.2))
             .foregroundStyle(isSelected ? .white : .primary)
             .clipShape(Capsule())
         }
@@ -176,7 +176,7 @@ struct BucketListItemRow: View {
         HStack(spacing: 12) {
             Image(systemName: item.category.icon)
                 .font(.title2)
-                .foregroundStyle(.accent)
+                .foregroundStyle(.tint)
                 .frame(width: 36)
 
             VStack(alignment: .leading, spacing: 4) {

@@ -26,7 +26,9 @@ struct ItemDetailView: View {
             .padding()
         }
         .navigationTitle(item.title)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
@@ -46,14 +48,14 @@ struct ItemDetailView: View {
             HStack {
                 Image(systemName: item.category.icon)
                     .font(.title)
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(.tint)
 
                 Text(item.category.rawValue)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 4)
-                    .background(Color(.systemGray5))
+                    .background(Color.gray.opacity(0.2))
                     .clipShape(Capsule())
 
                 Spacer()
@@ -164,7 +166,7 @@ struct ItemDetailView: View {
                 .foregroundStyle(.secondary)
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(.systemGray6))
+                .background(Color.gray.opacity(0.15))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }

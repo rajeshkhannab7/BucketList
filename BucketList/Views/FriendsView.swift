@@ -182,7 +182,7 @@ struct FriendDetailView: View {
                             HStack(spacing: 12) {
                                 Image(systemName: item.category.icon)
                                     .font(.title3)
-                                    .foregroundStyle(.accent)
+                                    .foregroundStyle(.tint)
 
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(item.title)
@@ -290,7 +290,9 @@ struct AddFriendView: View {
                 }
             }
             .navigationTitle("Add Friend")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }

@@ -54,7 +54,7 @@ struct SharedListsView: View {
                     HStack(spacing: 12) {
                         Image(systemName: item.category.icon)
                             .font(.title2)
-                            .foregroundStyle(.accent)
+                            .foregroundStyle(.tint)
                             .frame(width: 36)
 
                         VStack(alignment: .leading, spacing: 4) {

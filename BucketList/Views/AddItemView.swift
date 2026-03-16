@@ -99,7 +99,9 @@ struct AddItemView: View {
                 }
             }
             .navigationTitle("New Bucket List Item")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
