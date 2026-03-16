@@ -168,5 +168,5 @@ struct EditItemView: View {
         longitude: 2.2945,
         address: "Paris, France"
     ))
-    .modelContainer(for: BucketListItem.self, inMemory: true)
+    .modelContainer(previewContainer)
 }

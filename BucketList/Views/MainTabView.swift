@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct MainTabView: View {
     var body: some View {
@@ -24,5 +25,12 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
-        .modelContainer(for: [BucketListItem.self, Friend.self], inMemory: true)
+        .modelContainer(previewContainer)
 }
+
+@MainActor
+let previewContainer: ModelContainer = {
+    let schema = Schema([BucketListItem.self, Friend.self])
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    return try! ModelContainer(for: schema, configurations: [config])
+}()

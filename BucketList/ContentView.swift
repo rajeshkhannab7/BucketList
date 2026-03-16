@@ -8,5 +8,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: [BucketListItem.self, Friend.self], inMemory: true)
+        .modelContainer(previewContainer)
 }

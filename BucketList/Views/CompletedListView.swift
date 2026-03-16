@@ -87,5 +87,5 @@ struct CompletedListView: View {
 
 #Preview {
     CompletedListView()
-        .modelContainer(for: BucketListItem.self, inMemory: true)
+        .modelContainer(previewContainer)
 }

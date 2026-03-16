@@ -213,5 +213,5 @@ struct BucketListItemRow: View {
 
 #Preview {
     MyBucketListView()
-        .modelContainer(for: [BucketListItem.self, Friend.self], inMemory: true)
+        .modelContainer(previewContainer)
 }

@@ -287,5 +287,5 @@ struct ItemDetailView: View {
             address: "Paris, France"
         ))
     }
-    .modelContainer(for: BucketListItem.self, inMemory: true)
+    .modelContainer(previewContainer)
 }

@@ -145,5 +145,5 @@ struct SharedListsView: View {
 
 #Preview {
     SharedListsView()
-        .modelContainer(for: [BucketListItem.self, Friend.self], inMemory: true)
+        .modelContainer(previewContainer)
 }

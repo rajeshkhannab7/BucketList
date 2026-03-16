@@ -329,5 +329,5 @@ struct AddFriendView: View {
 
 #Preview {
     FriendsView()
-        .modelContainer(for: [Friend.self, BucketListItem.self], inMemory: true)
+        .modelContainer(previewContainer)
 }

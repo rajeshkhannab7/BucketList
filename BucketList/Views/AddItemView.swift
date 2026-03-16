@@ -170,5 +170,5 @@ extension CLPlacemark {
 
 #Preview {
     AddItemView()
-        .modelContainer(for: BucketListItem.self, inMemory: true)
+        .modelContainer(previewContainer)
 }
