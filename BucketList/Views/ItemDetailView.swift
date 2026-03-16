@@ -238,8 +238,10 @@ struct ItemDetailView: View {
     }
 
     private func openInMaps(coordinate: CLLocationCoordinate2D) {
-        let placemark = MKPlacemark(coordinate: coordinate)
-        let mapItem = MKMapItem(placemark: placemark)
+        let mapItem = MKMapItem(placemark: MKPlacemark(
+            coordinate: coordinate,
+            addressDictionary: nil
+        ))
         mapItem.name = item.title
         mapItem.openInMaps(launchOptions: [
             MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving

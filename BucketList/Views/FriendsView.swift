@@ -247,7 +247,9 @@ struct AddFriendView: View {
                     TextField("Name", text: $name)
                     TextField("Username", text: $username)
                         .autocorrectionDisabled()
+                        #if os(iOS)
                         .textInputAutocapitalization(.never)
+                        #endif
                 }
 
                 Section("Avatar Color") {
